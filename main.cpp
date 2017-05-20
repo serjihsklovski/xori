@@ -1,12 +1,13 @@
-#include "XoriMainWindow.h"
+#include "widget/MainWindow.h"
+
 #include <QApplication>
 
 
 int main(int argc, char* argv[]) {
     QApplication application(argc, argv);
-    XoriMainWindow xori;
+    Xori::Widget::MainWindow xori;
 
-    xori.showMaximized();
+    xori.show();
 
     return application.exec();
 }
