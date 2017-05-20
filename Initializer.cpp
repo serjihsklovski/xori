@@ -11,6 +11,7 @@ Xori::Initializer::Initializer() {
 
     createFolders();
     createConnection();
+    createTableSource(true);
 
     qDebug() << "Initialized";
 }
