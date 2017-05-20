@@ -14,6 +14,13 @@ namespace Xori {
 
         class Source;
     }
+
+
+    class Initializer;
+
+
+    void createFolders();
+    bool createConnection();
 }
 
 

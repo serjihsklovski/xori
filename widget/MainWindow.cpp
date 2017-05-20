@@ -1,10 +1,15 @@
 #include "MainWindow.h"
 #include "domain/Source.h"
+#include "Initializer.h"
 
 #include <QDebug>
 
 
 Xori::Widget::MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
+    Initializer::getInstance();
+    Initializer::getInstance();
+    Initializer::getInstance();
+
     QList<Domain::Source> sources = {
         Domain::Source(1, QUrl("C:/Users/Serjih/ass.txt"), "ass.txt"),
         Domain::Source(2, QUrl("C:/Users/Serjih/das.txt"), "das.txt"),
