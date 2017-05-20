@@ -21,6 +21,7 @@ namespace Xori {
 
     void createFolders();
     bool createConnection();
+    bool createTableSource(bool createMode = false);
 }
 
 
