@@ -1,13 +1,20 @@
 #include "Xori.h"
 
-//#include <QSqlDatabase>
-//#include <QSqlError>
+#include <QSqlDatabase>
+#include <QDir>
 
 
-//bool Xori::createConnection() {
-//    QSqlDatabase sqlDatabase = QSqlDatabase::addDatabase("QSQLITE");
+void Xori::createFolders() {
+    if (!QDir("../xori/data").exists()) {
+        QDir().mkdir("../xori/data");
+    }
+}
 
-//    sqlDatabase.setDatabaseName("../xori/data/xori.db");
 
-//    return sqlDatabase.open();
-//}
+bool Xori::createConnection() {
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+
+    db.setDatabaseName("../xori/data/xori.db");
+
+    return db.open();
+}

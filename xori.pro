@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES +=  main.cpp \
             Xori.cpp \
             widget/MainWindow.cpp \
-            domain/Source.cpp
+            domain/Source.cpp \
+            Initializer.cpp
 
 HEADERS +=  Xori.h \
             widget/MainWindow.h \
-            domain/Source.h
+            domain/Source.h \
+            Initializer.h
 
 DISTFILES += \
             .gitignore
