@@ -23,10 +23,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
-SOURCES += main.cpp\
-        XoriMainWindow.cpp
+SOURCES +=  main.cpp \
+            Xori.cpp \
+            widget/MainWindow.cpp \
+            domain/Source.cpp
 
-HEADERS  += XoriMainWindow.h
+HEADERS +=  Xori.h \
+            widget/MainWindow.h \
+            domain/Source.h
 
 DISTFILES += \
-    .gitignore
+            .gitignore
