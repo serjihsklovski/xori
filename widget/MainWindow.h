@@ -5,6 +5,7 @@
 #include "Xori.h"
 
 #include <QMainWindow>
+#include <QSqlTableModel>
 
 
 class Xori::Widget::MainWindow : public QMainWindow {
@@ -15,6 +16,14 @@ class Xori::Widget::MainWindow : public QMainWindow {
     public:
         explicit MainWindow(QWidget* parent = 0);
         ~MainWindow();
+
+
+    public slots:
+        void openFiles();
+
+
+    private:
+        QSqlTableModel* sourceModel;
 };
 
 

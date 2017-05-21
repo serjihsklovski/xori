@@ -18,6 +18,7 @@ class Xori::Domain::Source : public QObject {
                const QString& fileName,
                QObject* parent = 0);
 
+        Source(qlonglong id, const QUrl &url, QObject* parent = 0);
         Source(const Source& source);
         ~Source();
 
@@ -31,6 +32,7 @@ class Xori::Domain::Source : public QObject {
         void setUrl(const QUrl& url);
         void setFileName(const QString& fileName);
 
+        QString fetchFileNameFromUrl() const;
 
     private:
         qlonglong id;

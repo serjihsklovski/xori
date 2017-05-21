@@ -15,6 +15,15 @@ Xori::Domain::Source::Source(qlonglong id,
 }
 
 
+Xori::Domain::Source::Source(qlonglong id, const QUrl &url, QObject* parent) :
+        QObject(parent) {
+
+    this->id = id;
+    this->url = url;
+    fileName = fetchFileNameFromUrl();
+}
+
+
 Xori::Domain::Source::Source(const Source& source) :
         Source(source.id, source.url, source.fileName, source.parent()) {
 }
@@ -62,4 +71,9 @@ void Xori::Domain::Source::setUrl(const QUrl& url) {
 
 void Xori::Domain::Source::setFileName(const QString& fileName) {
     this->fileName = fileName;
+}
+
+
+QString Xori::Domain::Source::fetchFileNameFromUrl() const {
+    return url.toString().split("/").last();
 }
